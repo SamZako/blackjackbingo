@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BlackjackbingoComponent } from './blackjackbingo/blackjackbingo.component';
 import { AppListComponent } from './app-list/app-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,11 @@ import { AppListComponent } from './app-list/app-list.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
