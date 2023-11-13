@@ -1,0 +1,71 @@
+/* src/app/home/home.component.css */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff; /* Set the background color to white */
+}
+
+.content {
+  text-align: center;
+  background-color: #ffffff; /* Set the background color to white */
+  color: #333333; /* Set the text color to a dark color for better visibility */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: -500px; /* Adjust this value to center it at your preferred height */
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.password-input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.action-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50; /* Set the button background color to green */
+  color: white; /* Set the text color to white for better visibility */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #4CAF50; /* Set the link color to green */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

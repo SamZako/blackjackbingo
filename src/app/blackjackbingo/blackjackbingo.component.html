@@ -1,0 +1,24 @@
+<!-- src/app/blackjackbingo/blackjackbingo.component.html -->
+<div class="wrapper">
+<div class="container">
+    <div class="card-inputs">
+      <input [(ngModel)]="card1" placeholder="Card 1" class="card-input">
+      <input [(ngModel)]="card2" placeholder="Card 2" class="card-input">
+    </div>
+  
+    <input [(ngModel)]="dealerCard" placeholder="Dealer" class="card-input">
+  
+    <button (click)="updateAction()" class="action-button">Go!</button>
+  
+    <div *ngIf="areAnyEmpty(); else showAction" class="error-message">
+      Enter 3 cards
+    </div>
+  
+    <ng-template #showAction>
+      <div *ngIf="action !== ''" class="result-message">
+        <p>{{ action }}</p>
+      </div>
+    </ng-template>
+  </div>
+  </div>
+  

@@ -1,0 +1,13 @@
+<!-- src/app/app-list/app-list.component.html -->
+
+<div class="container">
+  <h1>Apps</h1>
+  <div class="app-grid">
+    <div *ngFor="let app of apps" class="app-icon">
+      <a [routerLink]="['/' + app.path]">
+        <img [src]="'./assets/' + app.icon" alt="{{ app.name }} icon">
+        <span>{{ app.name }}</span>
+      </a>
+    </div>
+  </div>
+</div>

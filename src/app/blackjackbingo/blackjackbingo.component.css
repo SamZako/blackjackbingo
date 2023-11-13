@@ -1,0 +1,74 @@
+/* src/app/blackjackbingo/blackjackbingo.component.css */
+
+body {
+  background-color: black;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* Adjust the height as needed */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 60%; /* Adjust the width as needed */
+}
+
+.card-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-input {
+  padding: 10px;
+  width: 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.card-input::placeholder {
+  font-size: 12px;
+}
+
+.dealer-input {
+  margin-top: 20px;
+}
+
+.action-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #45a049;
+}
+
+.error-message,
+.result-message {
+  margin-top: 10px;
+  font-size: 16px;
+  color: red;
+}

@@ -1,0 +1,42 @@
+/* src/app/app-list/app-list.component.css */
+
+.container {
+  text-align: center;
+  background-color: white;
+  color: #333333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Set a fixed number of columns */
+  grid-gap: 20px;
+  justify-content: center; /* Center the entire row */
+  margin-top: 20px;
+}
+
+.app-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
