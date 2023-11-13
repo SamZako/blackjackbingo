@@ -1,0 +1,10 @@
+<!-- src/app/app-list/app-list.component.html -->
+
+<div class="container">
+  <h1>Your Apps</h1>
+  <ul>
+    <li *ngFor="let app of apps">
+      <a [routerLink]="['/' + app.path]">{{ app.name }}</a>
+    </li>
+  </ul>
+</div>

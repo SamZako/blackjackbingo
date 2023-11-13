@@ -1,0 +1,27 @@
+/* src/app/app-list/app-list.component.css */
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
