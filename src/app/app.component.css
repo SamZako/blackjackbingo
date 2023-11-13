@@ -1,20 +1,36 @@
 /* src/app/app.component.css */
 
 .header {
-  text-align: center;
-  background-color: #004202;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242424;
   color: white;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .header h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header h2 {
   margin: 0;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.email-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.email-link:hover {
+  text-decoration: underline;
 }
