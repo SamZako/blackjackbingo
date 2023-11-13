@@ -1,0 +1,65 @@
+/* app.component.css */
+body {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .card-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .card-input {
+    padding: 10px;
+    width: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .card-input::placeholder {
+    font-size: 12px;
+  }
+  
+  /* Added spacing between the card inputs and dealer input */
+  .dealer-input {
+    margin-top: 20px;
+  }
+  
+  .action-button {
+    margin-top: 20px; /* Added spacing between dealer input and the button */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .action-button:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message, .result-message {
+    margin-top: 10px;
+    font-size: 16px;
+    color: red;
+  }
+  
