@@ -2,8 +2,16 @@
 
 <div class="header">
   <h1>samzakovich.com</h1>
-  <a class="email-link" href="mailto:samuelzakovich@gmail.com">Contact</a>
+  <div class="dropdown-menu">
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a routerLink="/">Home</a>
+        <a routerLink="/apps">Apps</a>
+        <a routerLink="/contact">Contact</a>
+      </div>
+    </div>
+  </div>
 </div>
 
-  <router-outlet></router-outlet>
-  
+<router-outlet></router-outlet>
