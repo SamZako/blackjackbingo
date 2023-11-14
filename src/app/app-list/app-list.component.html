@@ -4,9 +4,9 @@
   <h1>Apps</h1>
   <div class="app-grid">
     <div *ngFor="let app of apps" class="app-icon">
-      <a [routerLink]="['/' + app.path]">
+      <a [routerLink]="['/' + app.path]" [attr.aria-label]="app.name">
         <img [src]="'./assets/' + app.icon" alt="{{ app.name }} icon">
-        <span>{{ app.name }}</span>
+        <!-- <span>{{ app.name }}</span> -->
       </a>
     </div>
   </div>
