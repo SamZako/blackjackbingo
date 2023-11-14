@@ -57,7 +57,7 @@
 
 .button:hover {
   background-color: white;
-  color: #4CAF50;
+  color: #212131;
 }
 
 .boba-image {
@@ -104,16 +104,18 @@ h2 {
 .action-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50; /* Set the button background color to green */
+  background-color: #212131; /* Set the button background color to #212131 */
   color: white; /* Set the text color to white for better visibility */
-  border: none;
-  border-radius: 5px;
+  border: 2px solid #212131; /* Add a white border */
+  border-radius: 5px; /* Add rounded corners */
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s; /* Include border-color in transition */
 }
 
 .action-button:hover {
-  background-color: #45a049;
+  background-color: white;
+  color: #212131; /* Change text color to #212131 on hover */
+  border-color: #212131; /* Change border color to #212131 on hover */
 }
 
 a {
