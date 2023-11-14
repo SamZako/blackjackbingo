@@ -4,8 +4,67 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40%;
   background-color: #ffffff;
+  border-radius: 10px;
+  width: 50vh;
+  height: 15vh;
+  margin: 5vh auto 0; /* Adjust the margin-top value to make it lower */
+}
+
+.container-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  background-color: #212131;
+  border-radius: 15px;
+  width: 80%;
+  margin: 0vh auto 0; /* Adjust the margin-top value to your preference */
+  margin-top: 5px;
+}
+
+.links-wrapper {
+  background-color: transparent;
+  overflow: hidden;
+}
+
+/* src/app/home/home.component.css */
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+}
+
+.button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 15px; /* Adjust padding to add more space */
+  margin: 0 5px; /* Adjust margin to add space between buttons */
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* ... rest of your CSS ... */
+
+.button:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+.boba-image {
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width to your preference */
+  margin-top: 20px;
+  border-radius: 15px;
 }
 
 .content {
@@ -13,37 +72,40 @@
   background-color: #ffffff;
   color: #333333;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px; /* Add rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%; /* Adjust the width to your preference */
-  max-width: 400px; /* Set a maximum width for better readability */
+  max-width: 400px;
+}
+
+h1, h2 {
+  margin: 0;
 }
 
 h1 {
-  font-size: 24px; /* Adjust the font size for better visibility */
+  font-size: 36px;
   font-weight: bold;
 }
 
-p {
-  margin-bottom: 20px;
+h2 {
+  font-size: 28px;
+  font-weight: normal;
 }
 
 .password-input {
   padding: 10px;
-  width: 100%;
-  max-width: 300px; /* Adjust the max-width based on your design */
+  width: 25vh;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
   color: #333;
-  margin-bottom: 15px;
+  margin-right: 10px;
 }
 
 .action-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #4CAF50; /* Set the button background color to green */
+  color: white; /* Set the text color to white for better visibility */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -55,7 +117,7 @@ p {
 }
 
 a {
-  color: #4CAF50;
+  color: #4CAF50; /* Set the link color to green */
   text-decoration: none;
 }
 
