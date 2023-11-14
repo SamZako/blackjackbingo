@@ -4,32 +4,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #ffffff; /* Set the background color to white */
+  height: 40%;
+  background-color: #ffffff;
 }
 
 .content {
   text-align: center;
-  background-color: #ffffff; /* Set the background color to white */
-  color: #333333; /* Set the text color to a dark color for better visibility */
+  background-color: #ffffff;
+  color: #333333;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: -500px; /* Adjust this value to center it at your preferred height */
-}
-
-h1, h2 {
-  margin: 0;
+  width: 80%; /* Adjust the width to your preference */
+  max-width: 400px; /* Set a maximum width for better readability */
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 24px; /* Adjust the font size for better visibility */
   font-weight: bold;
-}
-
-h2 {
-  font-size: 28px;
-  font-weight: normal;
 }
 
 p {
@@ -38,19 +30,20 @@ p {
 
 .password-input {
   padding: 10px;
-  width: 200px;
+  width: 100%;
+  max-width: 300px; /* Adjust the max-width based on your design */
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
   color: #333;
-  margin-right: 10px;
+  margin-bottom: 15px;
 }
 
 .action-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50; /* Set the button background color to green */
-  color: white; /* Set the text color to white for better visibility */
+  background-color: #4CAF50;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -62,7 +55,7 @@ p {
 }
 
 a {
-  color: #4CAF50; /* Set the link color to green */
+  color: #4CAF50;
   text-decoration: none;
 }
 

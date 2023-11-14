@@ -13,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh; /* Adjust the height as needed */
+  height: 50%; /* Adjust the height as needed */
 }
 
 .container {
@@ -25,22 +25,24 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 60%; /* Adjust the width as needed */
+  width: 80%; /* Adjust the width as needed */
+  max-width: 400px; /* Set a maximum width for better readability */
 }
 
 .card-inputs {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   margin-bottom: 20px;
 }
 
 .card-input {
   padding: 10px;
-  width: 40px;
+  width: 100%;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .card-input::placeholder {
@@ -60,6 +62,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .action-button:hover {
