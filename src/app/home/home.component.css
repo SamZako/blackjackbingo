@@ -4,7 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #212131;
+  border: 2px solid white;
   border-radius: 10px;
   width: 50vh;
   height: 15vh;
@@ -29,8 +30,6 @@
   overflow: hidden;
 }
 
-/* src/app/home/home.component.css */
-
 .links {
   display: flex;
   justify-content: space-around;
@@ -51,9 +50,6 @@
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-
-
-/* ... rest of your CSS ... */
 
 .button:hover {
   background-color: white;
@@ -104,18 +100,18 @@ h2 {
 .action-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #212131; /* Set the button background color to #212131 */
-  color: white; /* Set the text color to white for better visibility */
-  border: 2px solid #212131; /* Add a white border */
+  background-color: white; /* Set the button background color to #212131 */
+  color: #212131; /* Set the text color to white for better visibility */
+  border: 2px solid white; /* Add a white border */
   border-radius: 5px; /* Add rounded corners */
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s; /* Include border-color in transition */
 }
 
 .action-button:hover {
-  background-color: white;
-  color: #212131; /* Change text color to #212131 on hover */
-  border-color: #212131; /* Change border color to #212131 on hover */
+  background-color: #212131;
+  color: white; /* Change text color to #212131 on hover */
+  border-color: white; /* Change border color to #212131 on hover */
 }
 
 a {

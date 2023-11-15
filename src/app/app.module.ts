@@ -10,22 +10,25 @@ import { BlackjackbingoComponent } from './blackjackbingo/blackjackbingo.compone
 import { AppListComponent } from './app-list/app-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { MusicSearchComponent } from './music-search/music-search.component';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BlackjackbingoComponent,
-    AppListComponent
+    AppListComponent,
+    MusicSearchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule // Add HttpClientModule to the imports array
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

@@ -1,0 +1,12 @@
+<!-- src/app/music-search/music-search.component.html -->
+<div>
+  <label for="artistName">Enter Artist Name:</label>
+  <input type="text" id="artistName" [(ngModel)]="artistName" placeholder="e.g., Adele">
+  <button (click)="search()">Search</button>
+</div>
+
+<div *ngIf="artist">
+  <h2>{{ artist.name }}</h2>
+  <p>Artist ID: {{ artist.id }}</p>
+  <img [src]="artist.images[0].url" alt="{{ artist.name }} Image">
+</div>

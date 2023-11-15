@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class AppListComponent {
   apps = [
     { name: 'Blackjack Bingo', path: 'blackjackbingo', icon: 'bbb-icon.png' },
-    // { name: 'app2', path: 'app2', icon: 'placeholder-icon' },
+    { name: 'Music Search', path: 'music-search', icon: 'bbb-icon.png' },
     // { name: 'app3', path: 'app3', icon: 'placeholder-icon' },
     // { name: 'app4', path: 'app4', icon: 'placeholder-icon' },
     // { name: 'app5', path: 'app5', icon: 'placeholder-icon' },
