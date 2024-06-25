@@ -1,19 +1,10 @@
 <!-- src/app/home/home.component.html -->
 
-<div *ngIf="isLoggedIn; else showLogin">
-  <div class="container-home">
-    <div class="links-wrapper">
-      <button routerLink="/" class="button">Home</button>
-      <button routerLink="/apps" class="button">Apps</button>
-      <button routerLink="/contact" class="button">Contact</button>
-    </div>
-    <img src="./assets/boba.png" alt="Boba Image" class="boba-image">
+<div class="container-home">
+  <div class="links-wrapper">
+    <button routerLink="/" class="button">Home</button>
+    <button routerLink="/apps" class="button">Apps</button>
+    <button routerLink="/contact" class="button">Contact</button>
   </div>
+  <img src="./assets/boba.png" alt="Boba Image" class="boba-image">
 </div>
-
-<ng-template #showLogin>
-  <div class="container">
-    <input [(ngModel)]="password" type="password" placeholder="Enter Password" class="password-input">
-    <button (click)="checkPassword()" class="action-button">Login</button>
-  </div>
-</ng-template>
