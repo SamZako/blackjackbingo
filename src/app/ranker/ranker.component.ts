@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { FileLoaderService } from '../file-loader.service';
+import { Subscription, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 interface Team {
   name: string;
@@ -11,7 +14,7 @@ interface Team {
   templateUrl: './ranker.component.html',
   styleUrls: ['./ranker.component.css']
 })
-export class RankerComponent {
+export class RankerComponent implements OnDestroy {
   teamList: string = '';
   teams: Team[] = [];
   rankedList: Team[] = [];
@@ -20,9 +23,21 @@ export class RankerComponent {
   currentMatch: Team[] = [];
   totalMatchups: number = 0;
   matchupsProgress: number = 0;
+  complexity: string = 'medium'; // Default complexity
   matchupsPerTeam: number = 3;
 
-  constructor() { }
+  predefinedLists = ['mlb.txt', 'cfb.txt', 'nfl.txt', 'nba.txt'];
+  selectedList: string = '';
+
+  private destroy$ = new Subject<void>(); // Subject to handle unsubscription
+  private fileLoaderSubscription: Subscription | undefined;
+
+  constructor(private fileLoaderService: FileLoaderService) {}
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 
   isValid(): boolean {
     return this.teamList.trim().length > 0;
@@ -55,7 +70,15 @@ export class RankerComponent {
     const n = this.teams.length;
     this.matchups = [];
 
-    while (this.matchups.length < this.matchupsPerTeam * n / 2) {
+    // Calculate number of matchups based on complexity
+    let factor = 1;
+    if (this.complexity === 'medium') {
+      factor = 2;
+    } else if (this.complexity === 'high') {
+      factor = 3;
+    }
+
+    while (this.matchups.length < this.matchupsPerTeam * n / factor) {
       for (let i = 0; i < n; i++) {
         for (let j = i + 1; j < n; j++) {
           if (this.teams[i].matchups < this.matchupsPerTeam && this.teams[j].matchups < this.matchupsPerTeam) {
@@ -101,5 +124,32 @@ export class RankerComponent {
     otherTeam.eloRating += 32 * (0 - expectedScoreOther);
 
     this.nextMatchup();
+  }
+
+  loadTeamList(filename: string): void {
+    if (this.fileLoaderSubscription) {
+      this.fileLoaderSubscription.unsubscribe(); // Unsubscribe previous subscription if exists
+    }
+    this.fileLoaderSubscription = this.fileLoaderService.loadFile(filename)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(
+        data => {
+          this.teamList = data; // Set the loaded text file content to teamList
+          this.startRanking(); // Start ranking automatically after loading
+        },
+        error => {
+          console.error('Failed to load team list from file:', error);
+        }
+      );
+  }
+
+  onSelectList(): void {
+    if (this.selectedList) {
+      this.loadTeamList(this.selectedList); // Load the selected list
+    }
+  }
+
+  onComplexityChange(): void {
+    this.generateMatchups(); // Regenerate matchups when complexity changes
   }
 }

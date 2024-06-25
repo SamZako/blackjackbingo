@@ -1,7 +1,24 @@
 <div class="container">
-    <h2>Rank Baseball Teams</h2>
+    <h2>Rank Teams</h2>
   
-    <textarea rows="10" cols="50" [(ngModel)]="teamList" placeholder="Enter baseball teams, one per line"></textarea>
+    <div class="form-group">
+      <label for="predefinedLists">Choose a predefined list:</label>
+      <select id="predefinedLists" [(ngModel)]="selectedList" (change)="onSelectList()" class="form-control">
+        <option value="" disabled>Select a list</option>
+        <option *ngFor="let list of predefinedLists" [value]="list">{{ list }}</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="complexity">Select complexity:</label>
+      <select id="complexity" [(ngModel)]="complexity" (change)="onComplexityChange()" class="form-control">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+  
+    <textarea rows="10" cols="50" [(ngModel)]="teamList" placeholder="Enter teams, one per line"></textarea>
   
     <button (click)="startRanking()" [disabled]="!isValid()">Start Ranking</button>
   
