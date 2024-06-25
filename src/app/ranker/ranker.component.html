@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Rank Baseball Teams</h2>
+  
+    <textarea rows="10" cols="50" [(ngModel)]="teamList" placeholder="Enter baseball teams, one per line"></textarea>
+  
+    <button (click)="startRanking()" [disabled]="!isValid()">Start Ranking</button>
+  
+    <div *ngIf="currentMatch.length === 2" class="matchup">
+      <h3>Which team do you prefer?</h3>
+      <div class="matchup-buttons">
+        <button (click)="chooseTeam(0)" class="team-button">{{ currentMatch[0].name }}</button>
+        <button (click)="chooseTeam(1)" class="team-button">{{ currentMatch[1].name }}</button>
+      </div>
+    </div>
+  
+    <div *ngIf="rankedList.length > 0" class="ranking-list">
+      <h3>Your Ranked List:</h3>
+      <ol>
+        <li *ngFor="let team of rankedList; let i = index">{{ i + 1 }}. {{ team.name }} ({{ team.eloRating.toFixed(2) }})</li>
+      </ol>
+    </div>
+  
+    <div class="progress" *ngIf="currentMatch.length === 2">
+      <div class="progress-bar" role="progressbar" [style.width.%]="(matchupsProgress / totalMatchups) * 100"
+           [attr.aria-valuenow]="matchupsProgress" aria-valuemin="0" [attr.aria-valuemax]="totalMatchups">
+        {{ matchupsProgress }} / {{ totalMatchups }} Matchups
+      </div>
+    </div>
+  </div>
+  
